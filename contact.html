@@ -421,6 +421,14 @@
     .footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:24px;}
     .footer-brand .brand-name{font-size:clamp(2.4rem,4vw,3.4rem);white-space:normal;}
     .footer-brand p{color:var(--on-dark-soft);max-width:36ch;}
+    .social{display:flex;gap:12px;margin-top:6px;}
+    .social a{
+      display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;
+      border:1px solid var(--dark-line);border-radius:50%;color:var(--on-dark-soft);
+      transition:color .4s var(--ease),background-color .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease);
+    }
+    .social a:hover{color:#23152b;background:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
+    .social svg{width:19px;height:19px;}
     .footer-cols{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:36px;}
     .footer-cols h4{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 20px;}
     .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:var(--on-dark-soft);}
@@ -581,6 +589,14 @@
           <span class="brand-name">Beautifully <em>Well</em></span>
           <p>Great Falls&rsquo; spa for facials, massage, and the reset you keep putting off.</p>
           <a class="btn btn-light" href="https://app.acuityscheduling.com/schedule.php?owner=39363557" target="_blank" rel="noopener">Book Your Appointment<svg class="arr" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16.5M12.5 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+          <div class="social">
+            <a href="https://www.instagram.com/jocelyn_bwglam/" target="_blank" rel="noopener" aria-label="Beautifully Well on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/BUtifullywell/" target="_blank" rel="noopener" aria-label="Beautifully Well on Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.6 8.4h2.3V5.5c-.4-.06-1.5-.16-2.7-.16-2.65 0-4.35 1.55-4.35 4.35v2.2H7.2v3.25h2.65V23h3.25v-7.86h2.65l.4-3.25h-3.05V10c0-.95.3-1.6 1.5-1.6z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-cols">
           <div>
