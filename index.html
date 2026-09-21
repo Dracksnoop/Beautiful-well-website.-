@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Jost:wght@300;400;500&amp;display=swap">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "DaySpa", "name": "Beautifully Well", "telephone": "+1-406-231-3766", "email": "butifullywell@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "1601 2nd Ave N, Office 128F", "addressLocality": "Great Falls", "addressRegion": "MT", "postalCode": "59401", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "15:30", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "13:30", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "13:30", "closes": "19:00"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "DaySpa", "name": "Beautifully Well", "telephone": "+1-406-231-3766", "email": "butifullywell@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "1601 2nd Ave N, Office 128F", "addressLocality": "Great Falls", "addressRegion": "MT", "postalCode": "59401", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "14:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "13:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "13:00", "closes": "18:00"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What services does Beautifully Well offer?", "acceptedAnswer": {"@type": "Answer", "text": "Facials, dermaplaning, massage therapy (including hot stone and cupping), pregnancy massage, foot reflexology, spa pedicures, and complimentary foot soaks."}}, {"@type": "Question", "name": "Where are you located?", "acceptedAnswer": {"@type": "Answer", "text": "1601 2nd Ave N, Office 128F, Great Falls, MT 59401."}}, {"@type": "Question", "name": "Do you accept VA-authorized bookings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we have a dedicated Veterans Affairs booking option for eligible services."}}, {"@type": "Question", "name": "Do I need an appointment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, appointments are recommended — walk-ins depend on availability."}}]}</script>
   <style>
     /* ================= Tokens ================= */
@@ -434,6 +434,14 @@
     .hours td{padding:15px 0;border-top:1px solid var(--dark-line);font-size:15.5px;}
     .hours td:last-child{text-align:right;color:var(--on-dark-soft);}
     .hours tr.today td{color:#e3c99f;}
+    .hours-note{display:block;margin-top:3px;font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+    .hours-foot{margin-top:22px;padding-top:18px;border-top:1px solid var(--dark-line);font-size:13.5px;line-height:1.6;color:var(--on-dark-soft);}
+    .hours-foot-note{margin-top:16px;font-size:13px;line-height:1.6;color:var(--on-dark-soft);}
+    .foot-hours-extra{margin-top:18px;padding-top:16px;border-top:1px solid var(--dark-line);display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--on-dark-soft);}
+    .foot-sub{font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);}
+    .storefront{margin-top:clamp(56px,7vw,96px);}
+    .storefront .frame{--leaf:clamp(56px,9vw,150px);aspect-ratio:16/9;}
+    @media (max-width:760px){.storefront .frame{aspect-ratio:4/3;}}
     .hours tr.today td:first-child::after{content:"";display:inline-block;width:6px;height:6px;margin-left:10px;border-radius:50%;background:#e3c99f;vertical-align:middle;}
     .map{margin-top:clamp(56px,7vw,100px);height:clamp(320px,38vw,480px);border:1px solid var(--line);background:var(--bg-2);}
     .map iframe{display:block;width:100%;height:100%;border:0;filter:grayscale(.55) sepia(.12) contrast(.96);}
@@ -457,12 +465,13 @@
     }
     .social a:hover{color:#23152b;background:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
     .social svg{width:19px;height:19px;}
-    .footer-cols{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:36px;}
+    .footer-cols{display:grid;grid-template-columns:.9fr 1.15fr 1.25fr;gap:clamp(24px,3vw,40px);}
     .footer-cols h4{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 20px;}
     .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:var(--on-dark-soft);}
     .footer-cols a{transition:color .3s ease;}
     .footer-cols a:hover{color:var(--on-dark);}
-    .footer-cols .hrs li{display:flex;justify-content:space-between;gap:14px;}
+    .footer-cols .hrs li{display:flex;justify-content:space-between;gap:16px;}
+    .footer-cols .hrs li span:last-child,.foot-hours-extra span{white-space:nowrap;}
     .footer-seal{display:flex;align-items:center;gap:clamp(18px,4vw,44px);padding-block:clamp(56px,7vw,96px);color:var(--gold);}
     .seal-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(184,148,98,0),rgba(184,148,98,.5));}
     .seal-line:last-child{background:linear-gradient(90deg,rgba(184,148,98,.5),rgba(184,148,98,0));}
@@ -712,13 +721,18 @@
           <div>
             <h4>Hours</h4>
             <ul class="hrs">
-            <li><span>Tue</span><span>3:30–5:00 PM</span></li>
-            <li><span>Wed</span><span>9:00 AM–7:00 PM</span></li>
-            <li><span>Thu</span><span>1:30–7:00 PM</span></li>
-            <li><span>Fri</span><span>9:00 AM–7:00 PM</span></li>
-            <li><span>Sat</span><span>1:30–7:00 PM</span></li>
+            <li><span>Tue</span><span>9:00 AM–2:00 PM</span></li>
+            <li><span>Wed</span><span>10:00 AM–4:00 PM</span></li>
+            <li><span>Thu</span><span>1:00–6:00 PM</span></li>
+            <li><span>Fri</span><span>9:00 AM–6:00 PM</span></li>
+            <li><span>Sat</span><span>1:00–6:00 PM</span></li>
             <li><span>Sun &amp; Mon</span><span>Closed</span></li>
             </ul>
+            <p class="hours-foot-note">Wednesdays Jocelyn is at the Shelby location, 10:00 AM–4:00 PM.</p>
+            <div class="foot-hours-extra">
+              <span class="foot-sub">Bio Tune-up &middot; Trey</span>
+              <span>Monday–Friday &middot; 3:30–5:00 PM</span>
+            </div>
           </div>
         </div>
       </div>

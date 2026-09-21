@@ -432,6 +432,14 @@
     .hours td{padding:15px 0;border-top:1px solid var(--dark-line);font-size:15.5px;}
     .hours td:last-child{text-align:right;color:var(--on-dark-soft);}
     .hours tr.today td{color:#e3c99f;}
+    .hours-note{display:block;margin-top:3px;font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+    .hours-foot{margin-top:22px;padding-top:18px;border-top:1px solid var(--dark-line);font-size:13.5px;line-height:1.6;color:var(--on-dark-soft);}
+    .hours-foot-note{margin-top:16px;font-size:13px;line-height:1.6;color:var(--on-dark-soft);}
+    .foot-hours-extra{margin-top:18px;padding-top:16px;border-top:1px solid var(--dark-line);display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--on-dark-soft);}
+    .foot-sub{font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);}
+    .storefront{margin-top:clamp(56px,7vw,96px);}
+    .storefront .frame{--leaf:clamp(56px,9vw,150px);aspect-ratio:16/9;}
+    @media (max-width:760px){.storefront .frame{aspect-ratio:4/3;}}
     .hours tr.today td:first-child::after{content:"";display:inline-block;width:6px;height:6px;margin-left:10px;border-radius:50%;background:#e3c99f;vertical-align:middle;}
     .map{margin-top:clamp(56px,7vw,100px);height:clamp(320px,38vw,480px);border:1px solid var(--line);background:var(--bg-2);}
     .map iframe{display:block;width:100%;height:100%;border:0;filter:grayscale(.55) sepia(.12) contrast(.96);}
@@ -455,12 +463,13 @@
     }
     .social a:hover{color:#23152b;background:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
     .social svg{width:19px;height:19px;}
-    .footer-cols{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:36px;}
+    .footer-cols{display:grid;grid-template-columns:.9fr 1.15fr 1.25fr;gap:clamp(24px,3vw,40px);}
     .footer-cols h4{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 20px;}
     .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:var(--on-dark-soft);}
     .footer-cols a{transition:color .3s ease;}
     .footer-cols a:hover{color:var(--on-dark);}
-    .footer-cols .hrs li{display:flex;justify-content:space-between;gap:14px;}
+    .footer-cols .hrs li{display:flex;justify-content:space-between;gap:16px;}
+    .footer-cols .hrs li span:last-child,.foot-hours-extra span{white-space:nowrap;}
     .footer-seal{display:flex;align-items:center;gap:clamp(18px,4vw,44px);padding-block:clamp(56px,7vw,96px);color:var(--gold);}
     .seal-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(184,148,98,0),rgba(184,148,98,.5));}
     .seal-line:last-child{background:linear-gradient(90deg,rgba(184,148,98,.5),rgba(184,148,98,0));}
@@ -624,9 +633,20 @@
             <p>I focus on a full spectrum of conditions for you and your family in assisting you with your overall maintenance and medical care.</p>
             <dl class="person-meta">
               <dt>Bio Tune-up Practice</dt>
-              <dd><a href="{TREY_MAPS}" target="_blank" rel="noopener">117 5th Ave N.<br>Shelby, MT 59474</a></dd>
+              <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=117+5th+Ave+N+Shelby+MT+59474" target="_blank" rel="noopener">117 5th Ave N.<br>Shelby, MT 59474</a></dd>
+            </dl>
+            <dl class="person-meta">
+              <dt>Available</dt>
+              <dd>Monday–Friday · 3:30–5:00 PM</dd>
             </dl>
           </div>
+        </div>
+      </div>
+      <div class="wrap storefront reveal">
+        <div class="frame wide reveal">
+          <img src="images/biotuneup-1600.jpg" srcset="images/biotuneup-900.jpg 900w, images/biotuneup-1600.jpg 1600w"
+               sizes="(max-width: 1280px) 100vw, 1180px" width="1600" height="1080"
+               alt="The Bio Tune-up storefront in Shelby, Montana" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -679,13 +699,18 @@
           <div>
             <h4>Hours</h4>
             <ul class="hrs">
-            <li><span>Tue</span><span>3:30–5:00 PM</span></li>
-            <li><span>Wed</span><span>9:00 AM–7:00 PM</span></li>
-            <li><span>Thu</span><span>1:30–7:00 PM</span></li>
-            <li><span>Fri</span><span>9:00 AM–7:00 PM</span></li>
-            <li><span>Sat</span><span>1:30–7:00 PM</span></li>
+            <li><span>Tue</span><span>9:00 AM–2:00 PM</span></li>
+            <li><span>Wed</span><span>10:00 AM–4:00 PM</span></li>
+            <li><span>Thu</span><span>1:00–6:00 PM</span></li>
+            <li><span>Fri</span><span>9:00 AM–6:00 PM</span></li>
+            <li><span>Sat</span><span>1:00–6:00 PM</span></li>
             <li><span>Sun &amp; Mon</span><span>Closed</span></li>
             </ul>
+            <p class="hours-foot-note">Wednesdays Jocelyn is at the Shelby location, 10:00 AM–4:00 PM.</p>
+            <div class="foot-hours-extra">
+              <span class="foot-sub">Bio Tune-up &middot; Trey</span>
+              <span>Monday–Friday &middot; 3:30–5:00 PM</span>
+            </div>
           </div>
         </div>
       </div>
